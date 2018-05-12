@@ -137,17 +137,17 @@
 
 	.form-price{
 		margin: auto;
-		max-width: 50%;
+		max-width: 70%;
 	}
 
 	.form-product{
 		margin: auto;
-		max-width: 50%;
+		max-width: 70%;
 	}
 
 	.form-approvers{
 		margin: auto;
-		max-width: 50%;
+		max-width: 70%;
 	}
 
 	section#main-panel{
@@ -158,13 +158,10 @@
 }
 
 @media only screen and (min-width: 1200px){
-	div.clear-userControlPanel{
-		margin-top: 8%;
-	}
 
 	section#main-panel{
 		margin: auto;
-		max-width: 60%;
+		max-width: 70%;
 	}
 }
 
