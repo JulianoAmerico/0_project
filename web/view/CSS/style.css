@@ -99,6 +99,42 @@ input[type=button]{
     margin: 0;
 }
 
+/* Cotation price 2approve */
+
+table, th, tr, td{
+	border: 1px solid black;
+	text-align: left;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+
+h2.cotationName{
+	font-size: 1.3em;
+}
+
+.cotation-container{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+a.cotation-link{
+	text-decoration: none;
+}
+
+a.cotation-link:link{
+	color: black;
+}
+
+a.cotation-link:visited{
+	color: black;
+}
+
+
+
 /*Footer*/
 footer{
 	background-color: black;
