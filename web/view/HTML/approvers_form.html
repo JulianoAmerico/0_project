@@ -21,38 +21,43 @@
 
 			<div class="row">
 				<div class="col-3 col-s-3"><label for="country">País:</label></div>
-				<div class="col-9 col-s-9"><input type="text" maxlength="4"></div>
+				<div class="col-9 col-s-9"><input type="text" maxlength="4" placeholder="Ex: BR" required></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3 col-s-3"><label for="storeCode">Código sequencial da loja:</label></div>
-				<div class="col-9 col-s-9"><input type="number" maxlength="20"></div>
+				<div class="col-9 col-s-9"><input type="number" maxlength="20" placeholder="Ex: 1202" required></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3 col-s-3"><label for="approverCode">Código aprovador:</label></div>
-				<div class="col-9 col-s-9"><input type="number" maxlength="6"></div>
+				<div class="col-9 col-s-9"><input type="number" maxlength="6" placeholder="Ex: 1001" required></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3 col-s-3"><label for="approverName">Nome do aprovador:</label></div>
-				<div class="col-9 col-s-9"><input type="text" maxlength="3"></div>
+				<div class="col-9 col-s-9"><input type="text" maxlength="3" placeholder="Ex: Silvio Santos" required></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3 col-s-3"><label for="approverDueDate">Data limite de validade:</label></div>
-				<div class="col-9 col-s-9"><input type="date" maxlength="10"></div>
+				<div class="col-9 col-s-9"><input type="date" maxlength="10" placeholder="Ex: 10/06/2018" required></div>
 			</div>
 
 			<div class="row">
-				<div class="col-3 col-s-3"><label for="approverActivate">Ativo:</label></div>
-				<div class="col-9 col-s-9"><input type="number" maxlength="3"></div>
+				<div class="col-3 col-s-3" style="margin:0;"><label for="approverActivate">Ativo:</label></div>
+				<!-- <div class="col-9 col-s-9"><input type="number" maxlength="3" placeholder="Ex: Sim/Não" required></div> -->
+				<div class="col-9 col-s-9">
+					<input type="radio" name="active" value="0" checked>Sim &nbsp;
+					<input type="radio" name="active" value="1">Não
+				</div>
 			</div>
 
 			<div class="row">
-			<div class="col-12">
-				<input type="submit" value="CADASTRAR">
-			</div>
+			    <div class="col-12">
+				    <input type="submit" value="CADASTRAR">
+			    </div>
+		    </div>
 		</div>
 
 		</form>
