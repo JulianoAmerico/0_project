@@ -1,78 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Juliano Américo">
-	<meta name="description" content="Cotation price">
-	<meta name="keywords" content="HTML, CSS, JavaScript">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cotação</title>
-	<link rel="stylesheet" href="../CSS/responsive.css">
-	<link rel="stylesheet" href="../CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Juliano Américo">
+    <meta name="description" content="Cotation price">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cotação</title>
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/style.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../JS/script.js"></script>
 </head>
 <body>
-    <section id="main-panel" class="row">
+     <section id="main-panel" class="row">
     
-    <a class="cotation-link" href="javascript:window.history.go(-1)">
-		<aside class="col-4 col-s-4">
-			<div class="polaroid">
-				<img src="../IMG/img_avatar.png" alt="Imagem de perfil" width="100%">
-				<div class="container">
-					<h3 id="profileName">Juliano Américo</h3>
-					<p>Desenvolvedor web</p>
-				</div>
-			</div>
-		</aside>
-	</a>	
-        
-        <div class="col-8 col-s-8">
-        	<h1>Cotações</h1>
-        	<hr>
-            <div class="row cotation-container">
-            	<h2 class="cotationName">Cotação 1</h2>
-            	<table class="col-12 col-s-12">
-            		<tr>
-            			<th>Descrição</th>
-            			<th>Valor</th>
-            		</tr>
-
-            		<tr>
-            			<td>País</td>
-            			<td>BR</td>
-            		</tr>
-            		<tr>
-            			<td>Código sequencial distribuidor/loja</td>
-            			<td>201819</td>
-            		</tr>
-            		<tr>
-            			<td>Número da cotação</td>
-            			<td>BR1810</td>
-            		</tr>
-            		<tr>
-            			<td>Código do produto</td>
-            			<td>1001</td>
-            		</tr>
-            		<tr>
-            			<td>Unidade de medida</td>
-            			<td>Unidade</td>
-            		</tr>
-            		<tr>
-            			<td>Quantidade</td>
-            			<td>20,00</td>
-            		</tr>
-            		<tr>
-            			<td>Preço</td>
-            			<td>10,00</td>
-            		</tr>
-            	</table>
-
-            	<div class="row">
-                    <a class="col-12 col-s-12" href="#"><input type="button" value="Aprovar cotação"></a> 	
+        <a class="cotation-link" href="javascript:window.history.go(-1)">
+            <aside class="col-4 col-s-9">
+                <div class="polaroid">
+                    <img src="../IMG/img_avatar.png" alt="Imagem de perfil" width="100%">
+                    <div class="container">
+                        <h3 id="profileName">Juliano Américo</h3>
+                        <p>Desenvolvedor web</p>
+                    </div>
                 </div>
+            </aside>
+        </a>
+
+        <div class="col-8">
+            <h1>Cotações</h1>
+            <hr>
+            
+            <div class="row">
+                <div class="cotation-title col-8 col-s-8">Cotação - 1</div>
+                <div class="col-4 col-s-4"><input type="button" class="bt-hide-1 cotation-bt" value="Mostrar cotação"></div>
             </div>
 
-	</section>
+            <div id="card-1">  
+                <table>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>País</td>
+                        <td>BR</td>
+                    </tr>
+                    <tr>
+                        <td>Código sequencial distribuidor/loja</td>
+                        <td>201819</td>
+                    </tr>
+                    <tr>
+                        <td>Número da cotação</td>
+                        <td>BR1810</td>
+                    </tr>
+                    <tr>
+                        <td>Código do produto</td>
+                        <td>1001</td>
+                    </tr>
+                    <tr>
+                        <td>Unidade de medida</td>
+                        <td>Unidade</td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade</td>
+                        <td>20,00</td>
+                    </tr>
+                    <tr>
+                        <td>Preço</td>
+                        <td>10,00</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><input type="button" value="Aprovar cotação"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="cotation-title col-8 col-s-8">Cotação - 2</div>
+                <div class="col-4 col-s-4"><input type="button" class="bt-hide-2 cotation-bt" value="Mostrar cotação"></div>
+            </div>
+
+            <div id="card-2">  
+                <table>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>País</td>
+                        <td>BR</td>
+                    </tr>
+                    <tr>
+                        <td>Código sequencial distribuidor/loja</td>
+                        <td>201819</td>
+                    </tr>
+                    <tr>
+                        <td>Número da cotação</td>
+                        <td>BR1810</td>
+                    </tr>
+                    <tr>
+                        <td>Código do produto</td>
+                        <td>1001</td>
+                    </tr>
+                    <tr>
+                        <td>Unidade de medida</td>
+                        <td>Unidade</td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade</td>
+                        <td>20,00</td>
+                    </tr>
+                    <tr>
+                        <td>Preço</td>
+                        <td>10,00</td>
+                    </tr>
+                     <tr>
+                        <td colspan="2"><input type="button" value="Aprovar cotação"></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+    </div>
+
+
+    </section>
 
 </body>
 </html>
