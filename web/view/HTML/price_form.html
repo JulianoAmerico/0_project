@@ -10,41 +10,42 @@
 	<title>Cadastro de preços</title>
 	<link rel="stylesheet" href="../CSS/responsive.css">
 	<link rel="stylesheet" href="../CSS/style.css">
+	<script type="text/javascript" src="../JS/script_js.js"></script>
 </head>
 <body>
 	<section class="form-price form">
 		<header><h1>Cadastro de preços</h1></header>
 
-		<form action="#" method="POST">
+		<form name="priceForm" action="#" method="POST">
 
 			<div class="row">
-				<div class="col-3 col-s-3"> <label for="country">País:</label></div>
-				<div class="col-9 col-s-9"><input type="text" maxlength="4" placeholder="Ex: BR" required></div>	
+				<div class="col-3 col-s-3"> <label>País:</label></div>
+				<div class="col-9 col-s-9"><input type="text" maxlength="4" placeholder="Ex: BR" name="country"required></div>	
 			</div>
 
 			<div class="row">
-				<div class="col-3 col-s-3"> <label for="storeCode">Código sequencial da distribuidor/loja:</label></div>
-				<div class="col-9 col-s-9"><input type="number" maxlength="20" placeholder="Ex: 1001" required></div>	
+				<div class="col-3 col-s-3"> <label>Código sequencial da distribuidor/loja:</label></div>
+				<div class="col-9 col-s-9"><input type="number" maxlength="20" placeholder="Ex: 1001" name="storeCode" required></div>	
 			</div>
 
 			<div class="row">
-				<div class="col-3 col-s-3"> <label for="numberPrice">Número da tabela de preços:</label></div>
-				<div class="col-9 col-s-9"><input type="number" maxlength="10" placeholder="Ex: 1020" required></div>	
+				<div class="col-3 col-s-3"> <label>Número da tabela de preços:</label></div>
+				<div class="col-9 col-s-9"><input type="number" maxlength="10" placeholder="Ex: 1020" name="numberPrice" required></div>	
 			</div>	
 			
 			<div class="row">
-				<div class="col-3 col-s-3"> <label for="productCode">Código do produto:</label></div>
-				<div class="col-9 col-s-9"><input type="text" maxlength="20" placeholder="Ex: 1001" required></div>	
+				<div class="col-3 col-s-3"><label>Código do produto:</label></div>
+				<div class="col-9 col-s-9"><input type="text" maxlength="20" placeholder="Ex: 1001" name="productCode" required></div>	
 			</div>
             
             <div class="row">
-                <div class="col-3 col-s-3"><label for="price">Preço:</label></div>
-                <div class="col-9 col-s-9"><input type="number" maxlength="15" placeholder="250,00" required></div>
+                <div class="col-3 col-s-3"><label>Preço:</label></div>
+                <div class="col-9 col-s-9"><input type="number" maxlength="15" placeholder="250,00" name="price" onKeypress="mask(this, valor)" required></div>
             </div>
 	
 			<div class="row">
 				<div class="col-12">
-					<input type="submit" value="CADASTRAR">
+					<input type="submit" value="CADASTRAR" onclick="return validatePriceForm()">
 				</div>
 			</div>
 
