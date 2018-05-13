@@ -10,6 +10,49 @@ function validateForm(){
 	}
 }
 
+//Approvers form validation
+function validateFormApprover(){
+    var country = approverForm.country.value;
+    var storeCode = approverForm.storeCode.value;
+    var approverCode = approverForm.approverCode.value;
+    var approverName = approverForm.approverName.value;
+    var approverDate = approverForm.approverDate.value;
+
+    // Country
+    if(country == ""){ 
+    	alert("O campo país deve ser preenchido");
+    	approverForm.country.focus();
+    	return false;  
+    }
+
+    // Store code
+    if(storeCode == ""){ 
+    	alert("O campo código de loja deve ser preenchido");
+    	approverForm.storeCode.focus();
+    	return false;  
+    }
+
+    // Approver code
+    if(approverCode == ""){
+    	alert("O campo código do aprovador deve ser preenchido");
+    	approverForm.approverCode.focus();
+    }
+
+    // Approver name
+    if(approverName == ""){ 
+    	alert("O campo nome do aprovador deve ser preenchido");
+    	approverForm.approverName.focus();
+    	return false;  
+    }
+
+    // Approver Date
+    if(approverDate == ""){ 
+    	alert("O campo da data de aprovação deve ser preenchido");
+    	approverForm.approverDate.focus();
+    	return false;  
+    }
+}
+
 // Mask for forms
 function mask(o, f){
 	v_obj = o;
