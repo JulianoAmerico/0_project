@@ -85,6 +85,10 @@ h1#profileText{
 	font-size: 1.5em;
 }
 
+input.input-password{
+	width: 50%;
+}
+
 /* User logon */
 
 input[type=button]{
@@ -102,23 +106,21 @@ input[type=button]{
 /* Cotation price 2approve */
 
 table, th, tr, td{
-	border: 1px solid black;
 	text-align: left;
-	border-collapse: collapse;
 	padding: 5px;
+	width: 100%;
 }
 
-
-h2.cotationName{
-	font-size: 1.3em;
-}
-
-.cotation-container{
-	border: 1px solid #ccc;
+div#card-1, div#card-2{
+	border: 1px solid black;
 	border-radius: 5px;
 	padding: 20px;
-
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+	/* background-color: white; */
+}
+
+.cotation-title{
+	font-size: 1.3em;
 }
 
 a.cotation-link{
@@ -133,7 +135,17 @@ a.cotation-link:visited{
 	color: black;
 }
 
-
+input.cotation-bt{
+	background-color: #4CAF50;
+    color: white;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    margin: 0;
+}
 
 /*Footer*/
 footer{
