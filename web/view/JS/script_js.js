@@ -53,6 +53,8 @@ function validateFormApprover(){
     }
 }
 
+
+
 // Mask for forms
 function mask(o, f){
 	v_obj = o;
@@ -64,6 +66,11 @@ function execmask(){
 	v_obj.value=v_fun(v_obj.value);
 }
 
+// Only integer numbers
+function integer(v){
+    v=v.replace(/\D/g, "");
+}
+
 // Pattern phone (11) 1111-1111
 function phone(v){
 	
@@ -72,3 +79,12 @@ function phone(v){
     v=v.replace(/(\d{4})(\d)/, "$1-$2"); //Put the '-' between fourth number and fifth number.
     return v;
 }
+
+// Date format
+function date(v){
+	v=v.replace(/\D/g,"");
+	v=v.replace(/^([0-9]{2})(\d)/g,"$1/$2");
+	v=v.replace(/(\d\d)([0-9]{2})/, "$1/$2");
+	return v;
+}
+
