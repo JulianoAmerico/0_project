@@ -217,7 +217,125 @@ function validateClientForm(){
     }       
 }
 
+// Product form validation
+function validateProductForm(){
+	var country = productForm.country.value;
+    var storeCode = productForm.storeCode.value;
+    var productCode = productForm.productCode.value;
+    var productDescription = productForm.productDescription.value;
+    var productDescriptionShort = productForm.productDescriptionShort.value;
+    var unit = productForm.unit.value;
+    var comercialFamily = productForm.comercialFamily.value;
+    var producerCode = productForm.producerCode.value;
+    var mark = productForm.mark.value;
 
+    //Country
+    if(country == ""){ 
+    	alert("O campo país deve ser preenchido");
+    	productForm.country.focus();
+    	return false;  
+    }
+
+    //Store Code
+    if(storeCode == ""){ 
+    	alert("O campo código de loja deve ser preenchido");
+    	productForm.storeCode.focus();
+    	return false;  
+    }
+
+    //Product code
+    if(productCode == ""){ 
+    	alert("O campo código do produto deve ser preenchido");
+    	productForm.productCode.focus();
+    	return false;  
+    }
+
+    //Product Description
+    if(productDescription == ""){
+    	alert("O campo descrição do produto deve ser preenchido");
+        productForm.productCode.focus();
+        return false;
+    }
+
+    //Product Description short
+    if(productDescriptionShort == ""){ 
+    	alert("O campo descrição abreviada do produto deve ser preenchido");
+    	productForm.productDescriptionShort.focus();
+    	return false;  
+    }
+
+    //Unit
+    if(unit == ""){ 
+    	alert("O campo unidade deve ser preenchido");
+    	productForm.unit.focus();
+    	return false;  
+    }
+
+    //Comercial family
+    if(comercialFamily == ""){ 
+    	alert("O campo família comercial deve ser preenchido");
+    	productForm.comercialFamily.focus();
+    	return false;  
+    }
+
+    //Producer code
+    if(producerCode == ""){ 
+    	alert("O campo código do fabricante deve ser preenchido");
+    	productForm.producerCode.focus();
+    	return false;  
+    }
+
+    //Mark
+    if(mark == ""){ 
+    	alert("O campo marca deve ser preenchido");
+    	productForm.mark.focus();
+    	return false;  
+    }
+}
+
+// Price form validation
+function validatePriceForm(){
+	var country = priceForm.country.value;
+	var storeCode = priceForm.storeCode.value;
+	var numberPrice = priceForm.numberPrice.value;
+	var productCode = priceForm.productCode.value;
+	var price = priceForm.price.value;
+
+	//Country
+	if(country == ""){
+		alert("O campo país deve ser preenchido");
+		priceForm.country.focus();
+		return false();
+	}
+
+	//Store code
+	if(storeCode == ""){
+		alert("O campo código da loja deve ser preenchido");
+		priceForm.storeCode.focus();
+		return false();
+	}
+
+	//Number price
+	if(numberPrice == ""){
+		alert("O campo número da tabela de preços deve ser preenchido");
+		priceForm.numberPrice.focus();
+		return false();
+	}
+
+	//Product code
+	if(productCode == ""){
+		alert("O campo código do produto deve ser preenchido");
+		priceForm.productCode.focus();
+		return false();
+	}
+
+	//Price
+	if(price == ""){
+		alert("O campo preço deve ser preenchido");
+		priceForm.price.focus();
+		return false();
+	}
+}
 
 // Mask for forms
 function mask(o, f){
@@ -259,6 +377,14 @@ function date(v){
 	v=v.replace(/\D/g,"");
 	v=v.replace(/^([0-9]{2})(\d)/g,"$1/$2");
 	v=v.replace(/(\d\d)([0-9]{2})/, "$1/$2");
+	return v;
+}
+
+// Valor monetário
+function valor(v){
+	v=v.replace(/\D/g, "");
+	v=v.replace(/^([0-9]{3}){3}-[0-9]{2}$/,"$1.$2");
+	v=v.replace(/(\d)(\d{2})$/,"$1.$2");
 	return v;
 }
 
