@@ -11,7 +11,7 @@ function validateForm(){
 }
 
 //Approvers form validation
-function validateFormApprover(){
+function validateApproverForm(){
     var country = approverForm.country.value;
     var storeCode = approverForm.storeCode.value;
     var approverCode = approverForm.approverCode.value;
@@ -36,6 +36,7 @@ function validateFormApprover(){
     if(approverCode == ""){
     	alert("O campo código do aprovador deve ser preenchido");
     	approverForm.approverCode.focus();
+    	return false;
     }
 
     // Approver name
