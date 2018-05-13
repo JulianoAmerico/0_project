@@ -10,6 +10,7 @@
 	<title>Login</title>
 	<link rel="stylesheet" href="../CSS/responsive.css">
 	<link rel="stylesheet" href="../CSS/style.css">
+	<script type="text/javascript" src="../JS/script_js.js"></script>
 </head>
 <body>
 	<div></div>
@@ -17,7 +18,7 @@
 	<section class="form-login form">
 
 		<!-- Login form-->
-		<form action="login" method="POST">
+		<form name="loginForm" action="#" method="POST" onsubmit="return validateForm()">
 
 			<div class="row">
 				<div class="col-3 col-s-3">
@@ -41,8 +42,8 @@
 
 			<div class="row">
 				<div class="col-12">
-					<!-- <input class="ok-login" type="submit" value="OK"> -->
-					<a href="user_logon.html"><input type="button" value="OK"></a>
+					<input class="ok-login" type="submit" value="OK">
+					<!-- <a href="user_logon.html"><input type="button" value="OK"></a> -->
 				</div>
 			</div>
 
