@@ -154,6 +154,14 @@
 	a input.userLogon-bt{
 		max-width: 70%;
 	}
+
+	div input.approver-input{
+		max-width: 50%;
+	}
+
+	div input.approver-bt{
+		max-width: 30%;
+	}
 }
 
 @media only screen and (min-width: 1200px){
