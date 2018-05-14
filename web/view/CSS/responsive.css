@@ -36,17 +36,13 @@
 	display: table;
 } 
 
+/*For Mobile phones*/
 [class*="col-"]{
 	float: left;
 	padding: 15px;
-}
-
-
-
-/*For Mobile phones*/
-[class*="col-"]{
 	width: 100%;
 }
+
 
 @media only screen and (min-width: 600px){
 	/*For Tablet*/
@@ -155,6 +151,9 @@
 		max-width: 100%;
 	}
 
+	a input.userLogon-bt{
+		max-width: 70%;
+	}
 }
 
 @media only screen and (min-width: 1200px){
