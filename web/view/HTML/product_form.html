@@ -19,52 +19,52 @@
         <form name="productForm" action="#" method="POST">
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>País:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="4" placeholder="Ex: BR" name="country" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="4" placeholder="Ex: BR" name="country" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Código sequencial da distribuidor/loja:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="20" placeholder="Ex: 1202" name="storeCode" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="20" placeholder="Ex: 1202" name="storeCode" required></div>
 		    </div>
 		    
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Código do produto:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="20" placeholder="Ex: 1001" name="productCode" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="20" placeholder="Ex: 1001" name="productCode" required></div>
 		    </div>
 		    
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Descrição do produto:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="40" placeholder="Ex: Carro" name="productDescription" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="40" placeholder="Ex: Carro" name="productDescription" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Descrição do produto abreviada:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="20" placeholder="Ex: Car" name="productDescriptionShort" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="20" placeholder="Ex: Car" name="productDescriptionShort" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Unidade de medida:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="4" placeholder="Ex: UN" name="unit" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="4" placeholder="Ex: UN" name="unit" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Família comercial:</label></div>
-			    <div class="col-9 col-s-9"><input type="text" maxlength="10" placeholder="Ex: Veículos" name="comercialFamily" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="text" maxlength="10" placeholder="Ex: Veículos" name="comercialFamily" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Código do fabricante:</label></div>
-			    <div class="col-9 col-s-9"><input type="number" maxlength="15" placeholder="Ex: 1010" name="producerCode" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="number" maxlength="15" placeholder="Ex: 1010" name="producerCode" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-3 col-s-3"><label>Marca:</label></div>
-			    <div class="col-9 col-s-9"><input type="number" maxlength="15" placeholder="Ex: Volkswagen" name="mark" required></div>
+			    <div class="col-9 col-s-9"><input class="product-input" type="number" maxlength="15" placeholder="Ex: Volkswagen" name="mark" required></div>
 		    </div>
 
 		    <div class="row">
 			    <div class="col-12">
-				    <input type="submit" value="CADASTRAR" onclick="return validateProductForm()">
+				    <input class="product-bt" type="submit" value="CADASTRAR" onclick="return validateProductForm()">
 			    </div>
 		    </div>
 		</form>
