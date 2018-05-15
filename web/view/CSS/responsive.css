@@ -194,6 +194,14 @@
 		margin: auto;
 		max-width: 70%;
 	}
+
+	div input.login-input{
+		max-width: 50%;
+	}
+
+	div input.login-bt{
+		max-width: 20%;
+	}
 }
 
 /* teste */
