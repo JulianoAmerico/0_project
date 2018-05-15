@@ -8,9 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Cadastro de cliente</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../CSS/responsive.css">
 	<link rel="stylesheet" href="../CSS/style.css">
 	<script type="text/javascript" src="../JS/script_js.js"></script>
+	<script type="text/javascript" src="../JS/valida_cpf_cnpj.js"></script>
 </head>
 <body>
 	<section class="form-client form">
@@ -24,7 +26,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-6 col-s-6">CNPJ<input type="text" maxlength="18" placeholder="Ex: XX.XXX.XXX/XXXX-XX" name="cnpj" onKeypress="mask(this, cnpjFunc)" required/></div>
+				<div class="col-6 col-s-6">CNPJ<input class="cpf_cnpj" type="text" maxlength="18" placeholder="Ex: XX.XXX.XXX/XXXX-XX" name="cnpj" onKeypress="mask(this, cnpjFunc)" required/></div>
 				<div class="col-6 col-s-6">Nome da fantasia:<input type="text" maxlength="40" placeholder="Ex: Minha empresa LTDA" name="fantasyName" required></div>
 			</div>
 
@@ -66,14 +68,14 @@
 
 			<div class="row">
 				<div class="col-6 col-s-6">Site<input type="text" maxlength="70" placeholder="Ex: www.meusite.com.br" name="site" required></div>
-				<div class="col-6 col-s-6">CNPJ da Matriz:<input type="text" maxlength="18" placeholder="Ex: XX.XXX.XXX/XXXX-XX" onKeypress="mask(this, cnpjFunc)" name="cnpjMatriz" required></div>
+				<div class="col-6 col-s-6">CNPJ da Matriz:<input class="cpf_cnpj" type="text" maxlength="18" placeholder="Ex: XX.XXX.XXX/XXXX-XX" onKeypress="mask(this, cnpjFunc)" name="cnpjMatriz" required></div>
 			</div>
 
 			<div class="row">
 				<!-- <label>IBGE:
                 <input name="ibge" type="text" id="ibge" size="8" /></label><br /> -->
 				<div class="col-12">
-					<input class="client-bt" type="submit" value="CADASTRAR" onclick="return validateClientForm()">
+					<input class="client-bt" type="submit" value="CADASTRAR">
 				</div>
 			</div>
 		</form>

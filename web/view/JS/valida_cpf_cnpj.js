@@ -269,3 +269,25 @@ function formata_cpf_cnpj( valor ) {
     return formatado;
     
 } // formata_cpf_cnpj
+
+// JQuery
+
+$(function(){
+
+    // ## EXEMPLO 2
+    // Aciona a validação ao sair do input
+    $('.cpf_cnpj').blur(function(){
+    
+        // O CPF ou CNPJ
+        var cpf_cnpj = $(this).val();
+        
+        // Testa a validação
+        if ( valida_cpf_cnpj( cpf_cnpj ) ) {
+            alert('OK');
+        } else {
+            alert('CPF ou CNPJ inválido!');
+        }
+        
+    });
+    
+});
