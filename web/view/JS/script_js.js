@@ -396,70 +396,68 @@ function valor(v){
 }
 
 // CEP
-function limpa_formulário_cep() {
-        //Limpa valores do formulário de cep.
-        document.getElementById('rua').value=("");
-        document.getElementById('bairro').value=("");
-        document.getElementById('cidade').value=("");
-        document.getElementById('uf').value=("");
-        // document.getElementById('ibge').value=("");
+function clean_form_cep() {
+        //Clean value of the inputs
+        document.getElementById('address').value=("");
+        document.getElementById('neighbourhood').value=("");
+        document.getElementById('city').value=("");
+        document.getElementById('state').value=("");
 }
 
-function meu_callback(conteudo) {
-    if (!("erro" in conteudo)) {
-        //Atualiza os campos com os valores.
-        document.getElementById('rua').value=(conteudo.logradouro);
-        document.getElementById('bairro').value=(conteudo.bairro);
-        document.getElementById('cidade').value=(conteudo.localidade);
-        document.getElementById('uf').value=(conteudo.uf);
-        // document.getElementById('ibge').value=(conteudo.ibge);
-    } //end if.
+function my_callback(content) {
+    if (!("erro" in content)) {
+        //Update fields with values.
+        document.getElementById('address').value=(content.logradouro);
+        document.getElementById('neighbourhood').value=(content.bairro);
+        document.getElementById('city').value=(content.localidade);
+        document.getElementById('state').value=(content.uf);
+    } 
     else {
-        //CEP não Encontrado.
-        limpa_formulário_cep();
+        //CEP not found.
+        clean_form_cep();
         alert("CEP não encontrado.");
     }
 }
     
-function pesquisacep(valor) {
+function searchcep(v) {
 
-    //Nova variável "cep" somente com dígitos.
-    var cep = valor.replace(/\D/g, '');
+    //New cep only numbers
+    var cep = v.replace(/\D/g, '');
 
-    //Verifica se campo cep possui valor informado.
+    //Check if cep is empty
     if (cep != "") {
 
-        //Expressão regular para validar o CEP.
+        //Regex for CEP
         var validacep = /^[0-9]{8}$/;
 
         //Valida o formato do CEP.
         if(validacep.test(cep)) {
 
-            //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('rua').value="...";
-            document.getElementById('bairro').value="...";
-            document.getElementById('cidade').value="...";
-            document.getElementById('uf').value="...";
-            // document.getElementById('ibge').value="...";
+            //Fill the fields with "..." while consult webservice
+            document.getElementById('address').value="...";
+            document.getElementById('neighbourhood').value="...";
+            document.getElementById('city').value="...";
+            document.getElementById('state').value="...";
+           
 
-            //Cria um elemento javascript.
+            //Create an element javascript
             var script = document.createElement('script');
 
-            //Sincroniza com o callback.
-            script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+            //Sync with callback
+            script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=my_callback';
 
-            //Insere script no documento e carrega o conteúdo.
+            //Inset script into doc and load content
             document.body.appendChild(script);
 
-        } //end if.
+        } 
         else {
-            //cep é inválido.
-            limpa_formulário_cep();
+            //cep invalid
+            clean_form_cep();
             alert("Formato de CEP inválido.");
         }
-    } //end if.
+    }
     else {
-        //cep sem valor, limpa formulário.
-        limpa_formulário_cep();
+        //cep without value clean form
+        clean_form_cep();
     }
 }
