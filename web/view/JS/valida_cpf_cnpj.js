@@ -274,16 +274,15 @@ function formata_cpf_cnpj( valor ) {
 
 $(function(){
 
-    // ## EXEMPLO 2
-    // Aciona a validação ao sair do input
+    //Active function after user out of input.
     $('.cpf_cnpj').blur(function(){
     
-        // O CPF ou CNPJ
+        //Receive value cpf or cnpj
         var cpf_cnpj = $(this).val();
         
         // Testa a validação
         if ( valida_cpf_cnpj( cpf_cnpj ) ) {
-            alert('OK');
+           
         } else {
             alert('CPF ou CNPJ inválido!');
         }
