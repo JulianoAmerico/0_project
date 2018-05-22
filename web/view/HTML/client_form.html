@@ -21,7 +21,23 @@
 		<form name="clientForm" action="#" method="POST">
 
 			<div class="row">
-				<div class="col-6 col-s-6">País:<input type="text" maxlength="4" placeholder="Ex: BR" autofocus name="country" required></div>
+				<div class="col-6 col-s-6">País:<br>
+				<!-- <input type="text" maxlength="4" placeholder="Ex: BR" autofocus name="country" required></div> -->
+				<select name="countries" id="countries">
+					<option value="alemanha">Alemanha</option>
+					<option value="argentina">Argentina</option>
+					<option value="brasil" selected>Brasil</option>
+					<option value="canada">Canadá</option>
+					<option value="china">China</option>
+					<option value="colombia">Colombia</option>
+					<option value="espanha">Espanha</option>
+					<option value="eua">Estados Unidos</option>
+					<option value="japao">Japão</option>
+					<option value="paraguai">Paraguai</option>
+					<option value="uruguai">Uruguai</option>
+					<option value="venezuela">Venezuela</option>				
+				</select>
+			    </div>
 				<div class="col-6 col-s-6">Código sequencial distribuidor/loja:<input type="number" maxlength="20" placeholder="Ex: 1202" name="storeCode" required></div>
 			</div>
 
