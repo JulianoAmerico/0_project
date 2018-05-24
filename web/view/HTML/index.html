@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Juliano Américo">
+	<meta name="description" content="Login area">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login</title>
+	<link rel="stylesheet" href="../CSS/responsive.css">
+	<link rel="stylesheet" href="../CSS/style.css">
+	<script type="text/javascript" src="../JS/script_js.js"></script>
+</head>
+<body>
+	<div></div>
+	<div class="clear"></div>
+	<section class="form-login form">
+
+		<!-- Login form-->
+		<form name="loginForm" action="#" method="POST" onsubmit="return validateForm()">
+
+			<div class="row">
+				<div class="col-3 col-s-3">
+					<label for="login">Login:</label>
+				</div>
+
+				<div class="col-9 col-s-9">
+					<input class="login-input" type="text" name="login" placeholder="Fulano" autofocus maxlength="20">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 col-s-3">
+					<label for="password">Senha:</label>
+				</div>
+
+				<div class="col-9 col-s-9">
+					<input class="login-input" type="password" name="password" placeholder="*********" maxlength="8">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<!-- <input class="ok-login" type="submit" value="OK"> -->
+					<a href="user_logon.html"><input class="login-bt" type="button" value="OK"></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<a href="#">Criar novo usuário...</a>
+				</div>
+			</div>
+		</form>
+	</section>
+</body>
+</html>
