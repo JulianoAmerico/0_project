@@ -144,7 +144,33 @@ table.tableCotation-1 th{
 div#card-1, div#card-2{
 	border: 1px solid black;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 5px;
+}
+
+.content-2{
+	display: none;
+}
+
+span.content-1{
+	position: absolute;
+	left: 65%;
+}
+
+span.cotation-title-header{
+	color: black;
+}
+
+span.cotation-title-footer{
+	color: black;
+	font-size: 1.3em;
+}
+
+span.cotation-footer{
+	font-size: 1.5em;
+}
+
+span.cotation-price{
+	font-size: 1.5em;
 }
 
 .cotation-title{

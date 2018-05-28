@@ -72,6 +72,12 @@
 		margin: auto;
 		max-width: 100%;
 	}
+
+	.profile-img{
+		margin: auto;
+		max-width: 50%;
+	}
+
 }
 
 
@@ -116,6 +122,19 @@
 
 	section#main-panel{
 		margin: auto;
+		max-width: 100%;
+	}
+
+	span.content-1{
+		display: none;
+	}
+
+	div.content-2{
+		display: block;
+	}
+
+	.profile-img{
+		margin: none;
 		max-width: 100%;
 	}
 }
